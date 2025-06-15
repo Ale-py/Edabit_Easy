@@ -79,10 +79,18 @@ def number_split(num):
         return num_list
 
 print(number_split(-9))
+# 16. Create a function that takes a number as input and returns True if the sum of its digits has the same parity
+# as the entire number. Otherwise, return False.
+# Parity is whether a number is even or odd. If the sum of the digits is even and the number itself is even, return True.
+# The same goes if the number is odd and so is the sum of its digits.
+# Single digits will obviously have the same parities
+def parity_analysis(num):
+    digit_sum = sum(int(d) for d in str(num))
+    return (num % 2) == (digit_sum % 2)
 
-
-
-
+print(parity_analysis(12))
+print(parity_analysis(123))
+print(parity_analysis(111))
 
 
 
